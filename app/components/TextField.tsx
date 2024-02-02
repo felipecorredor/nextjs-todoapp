@@ -17,7 +17,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldPropTypes>(
         </label>
         <input
           type={type}
-          className="p-2 rounded-md bg-none text-emerald-950 w-full"
+          className="p-2 rounded-md border placeholder-gray-500 border-white bg-transparent w-full"
           id={label}
           ref={ref}
           {...rest}

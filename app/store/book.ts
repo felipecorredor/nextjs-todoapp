@@ -46,7 +46,7 @@ const initialValues = {
 
 export const useBookStore = create(
   (set: (fn: (state: BookStore) => void) => void) => ({
-    books: initialBooks,
+    books: [...initialBooks],
     isEditing: false,
     book: { ...initialValues },
     addBook: (book: Book) =>
