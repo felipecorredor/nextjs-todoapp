@@ -60,14 +60,9 @@ export const useBookStore = create(
     setIsEditing: (isEditing) => set(() => ({ isEditing: isEditing })),
     updateBook: (bookUpdate: Book) =>
       set((state) => ({
-        books: state.books.map((book) => {
-          if (book.id === bookUpdate.id) {
-            return {
-              ...bookUpdate,
-            };
-          }
-          return book;
-        }),
+        books: state.books.map((book) =>
+          book.id === bookUpdate.id ? { ...bookUpdate } : book
+        ),
       })),
   })
 );
